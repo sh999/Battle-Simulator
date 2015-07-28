@@ -1,4 +1,8 @@
 class Warrior():
+	'''
+	Barebones class that is meant to have a warrior's stats
+	Not intended to have complex methods that have calculations and heavy logic
+	'''
 	def __init__(self, name, attack, defense, agility):
 		self.attack = attack
 		self.defense = defense

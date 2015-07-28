@@ -1,13 +1,11 @@
 '''
 Create simple battle simulator that can be extended for a bigger game
-Simulator mechanics can be as simple as dice-based or 
 '''
 
 from warrior import *
 from die import *
 from battlestats import *
 from roundmanager import *
-
 
 def game():
 	'''
@@ -38,7 +36,8 @@ def game():
 	
 	print "Battle stats:"
 	print "Winner = ", battleStats.getWinner()
-	print "Total rounds = ", battleStats.getRounds()	print "HP history = "
+	print "Total rounds = ", battleStats.getRounds()
+	print "HP history = "
 	print myWarrior.getName(), "  = ", battleStats.getHistory(myWarrior)
 	print compWarrior.getName(), "= ", battleStats.getHistory(compWarrior)
 

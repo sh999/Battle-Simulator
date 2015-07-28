@@ -1,4 +1,8 @@
 from die import *
+'''
+Has modules that are the brains or calculators of a battle
+Determines attacker/defender and calculates damage in a round
+'''
 
 def determineAttacker(warrior1, warrior2):
 	'''

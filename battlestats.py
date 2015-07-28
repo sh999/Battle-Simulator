@@ -1,5 +1,13 @@
 class BattleStats:
+	'''
+	Takes in two warriors and keeps track of their healths for all battle rounds
+	Doesn't do any calculations; merely a record-keeper
+
+	'''
 	def __init__(self, warrior1, warrior2):
+		'''
+		This class keeps track of two warriors, their healths, and # of rounds
+		'''
 		self.warrior1 = warrior1
 		self.warrior2 = warrior2
 		self.totalRounds = 0
