@@ -2,7 +2,7 @@
 Create simple battle simulator that can be extended for a bigger game
 '''
 
-from warrior import *
+from warrior import *	# Since I'm importing using wildcard, I'm using the modules as groupings of other modules
 from die import *
 from battlestats import *
 from roundmanager import *
