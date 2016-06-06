@@ -9,13 +9,16 @@ from roundmanager import *
 
 def game():
 	'''
-	Simulate damage with simple die mechanism
+	'	Simulate damage with simple die mechanism
 	'''
-	myWarrior = Warrior("My warrior", 6, 5, 9)
+	myWarrior = Warrior("My warrior", 6, 5, 9)		# Create human and computer warriors
 	compWarrior = Warrior("Computer warrior", 8, 4, 8)
 	divider = "-" * 10
-	battleStats = BattleStats(myWarrior, compWarrior)
+	battleStats = BattleStats(myWarrior, compWarrior)	# BattleStats keeps track of stats
 	while myWarrior.getHealth() > 0 and compWarrior.getHealth() > 0:
+	'''
+	'	Loop battle while human warrior has positive health
+	'''
 		print divider
 		myWarrior.printCondition()
 		compWarrior.printCondition()
@@ -26,7 +29,7 @@ def game():
 		battleStats.addRounds()
 		battleStats.recordDamage(myWarrior.getHealth(), compWarrior.getHealth())
 		# a = raw_input()
-	if myWarrior.getHealth() <= 0:
+	if myWarrior.getHealth() <= 0:				# Winning or losing scenario
 		print myWarrior.getName(), "is dead!"
 		battleStats.setWinner(compWarrior)
 	else:
@@ -34,7 +37,7 @@ def game():
 		battleStats.setWinner(myWarrior)
 	print divider
 	
-	print "Battle stats:"
+	print "Battle stats:"					# Display final result
 	print "Winner = ", battleStats.getWinner()
 	print "Total rounds = ", battleStats.getRounds()
 	print "HP history = "
